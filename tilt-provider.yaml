@@ -3,3 +3,4 @@ config:
   image: controller:latest # change to remote image name if desired
   label: CABPKI
   live_reload_deps: ["main.go", "go.mod", "go.sum", "api", "controllers", "pkg"]
+  go_main: "cmd/main.go"
