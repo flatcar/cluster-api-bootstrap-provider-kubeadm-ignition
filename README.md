@@ -1,6 +1,8 @@
-# cluster-api-bootstrap-provider-kubeadm-ignition
+# Cluster API Bootstrap Provider kubeadm-Ignition
 
-Kubeadm ignition bootstrap provider for ClusterAPI.
+A [Cluster API](https://github.com/kubernetes-sigs/cluster-api) bootstrap provider which uses
+[kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/) to bootstrap clusters with
+[Ignition](https://coreos.github.io/ignition/) as the provisioning mechanism.
 
 This project is driven by the Node Bootstrapping working group
 ("[WG NoBo](https://github.com/kubernetes-sigs/cluster-api/blob/main/docs/community/20241112-node-bootstrapping.md)")
