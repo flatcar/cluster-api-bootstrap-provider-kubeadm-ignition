@@ -8,6 +8,11 @@ namespace: cluster-api-bootstrap-provider-kubeadm-ignition-system
 # field above.
 namePrefix: cluster-api-bootstrap-provider-kubeadm-ignition-
 
+labels:
+- includeSelectors: true
+  pairs:
+    cluster.x-k8s.io/provider: bootstrap-kubeadm-ignition
+
 # Labels to add to all resources and selectors.
 #labels:
 #- includeSelectors: true
