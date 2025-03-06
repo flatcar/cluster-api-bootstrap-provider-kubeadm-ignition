@@ -52,7 +52,11 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 
 	clusterv1 "sigs.k8s.io/cluster-api/api/v1beta1"
+	// We need to import deprecated packages for backward compatibility.
+	// nolint:staticcheck
 	bootstrapv1alpha3 "sigs.k8s.io/cluster-api/bootstrap/kubeadm/api/v1alpha3"
+	// We need to import deprecated packages for backward compatibility.
+	// nolint:staticcheck
 	bootstrapv1alpha4 "sigs.k8s.io/cluster-api/bootstrap/kubeadm/api/v1alpha4"
 	bootstrapv1 "sigs.k8s.io/cluster-api/bootstrap/kubeadm/api/v1beta1"
 	kubeadmbootstrapcontrollers "sigs.k8s.io/cluster-api/bootstrap/kubeadm/controllers"
@@ -105,6 +109,8 @@ func init() {
 }
 
 // InitFlags initializes the flags.
+//
+// nolint:lll
 func InitFlags(fs *pflag.FlagSet) {
 	logsv1.AddFlags(logOptions, fs)
 
@@ -184,6 +190,7 @@ func InitFlags(fs *pflag.FlagSet) {
 }
 
 // Add RBAC for the authorized diagnostics endpoint.
+// nolint:lll
 // +kubebuilder:rbac:groups=authentication.k8s.io,resources=tokenreviews,verbs=create
 // +kubebuilder:rbac:groups=authorization.k8s.io,resources=subjectaccessreviews,verbs=create
 // ADD CRD RBAC for CRD Migrator.
